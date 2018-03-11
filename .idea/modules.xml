@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/base.iml" filepath="$PROJECT_DIR$/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-api/base-api.iml" filepath="$PROJECT_DIR$/base-api/base-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-api/base-api-common/base-api-common.iml" filepath="$PROJECT_DIR$/base-api/base-api-common/base-api-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-api/base-api-dao/base-api-dao.iml" filepath="$PROJECT_DIR$/base-api/base-api-dao/base-api-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-api/base-api-rpc-api/base-api-rpc-api.iml" filepath="$PROJECT_DIR$/base-api/base-api-rpc-api/base-api-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-api/base-api-rpc-service/base-api-rpc-service.iml" filepath="$PROJECT_DIR$/base-api/base-api-rpc-service/base-api-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-api/base-api-server/base-api-server.iml" filepath="$PROJECT_DIR$/base-api/base-api-server/base-api-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys.iml" filepath="$PROJECT_DIR$/base-sys/base-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-common/base-sys-common.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-common/base-sys-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-dao/base-sys-dao.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-dao/base-sys-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-rpc-api/base-sys-rpc-api.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-rpc-api/base-sys-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-rpc-service/base-sys-rpc-service.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-rpc-service/base-sys-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-server/base-sys-server.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-server/base-sys-server.iml" />
+    </modules>
+  </component>
+</project>

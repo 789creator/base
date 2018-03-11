@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.assertj:assertj-core:unknown">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../repo/org/assertj/assertj-core/unknown/assertj-core-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../repo/org/assertj/assertj-core/unknown/assertj-core-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../repo/org/assertj/assertj-core/unknown/assertj-core-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

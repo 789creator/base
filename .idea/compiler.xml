@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base-api-common" />
+        <module name="base-api-dao" />
+        <module name="base-api-rpc-api" />
+        <module name="base-api-rpc-service" />
+        <module name="base-api-server" />
+        <module name="base-sys-common" />
+        <module name="base-sys-common (1)" />
+        <module name="base-sys-dao" />
+        <module name="base-sys-rpc-api" />
+        <module name="base-sys-rpc-service" />
+        <module name="base-sys-rpc-service (1)" />
+        <module name="base-sys-rpc-spi" />
+        <module name="base-sys-server" />
+        <module name="base-sys-server (1)" />
+        <module name="framework-api-common" />
+        <module name="framework-api-dao" />
+        <module name="framework-api-rpc-service" />
+        <module name="framework-api-rpc-spi" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="base" target="1.8" />
+      <module name="base-api" target="1.8" />
+      <module name="base-api-common" target="1.8" />
+      <module name="base-api-dao" target="1.8" />
+      <module name="base-api-rpc-api" target="1.8" />
+      <module name="base-api-rpc-service" target="1.8" />
+      <module name="base-api-server" target="1.5" />
+      <module name="base-sys" target="1.8" />
+      <module name="base-sys-common" target="1.8" />
+      <module name="base-sys-dao" target="1.8" />
+      <module name="base-sys-rpc-api" target="1.8" />
+      <module name="base-sys-rpc-service" target="1.8" />
+      <module name="base-sys-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
