@@ -13,6 +13,7 @@
 	<modules>
         <module>base-sys</module>
 		<module>base-api</module>
+		<module>base-common</module>
     </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

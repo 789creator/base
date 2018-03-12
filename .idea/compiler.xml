@@ -11,6 +11,8 @@
         <module name="base-api-rpc-api" />
         <module name="base-api-rpc-service" />
         <module name="base-api-server" />
+        <module name="base-common" />
+        <module name="base-sys-client" />
         <module name="base-sys-common" />
         <module name="base-sys-common (1)" />
         <module name="base-sys-dao" />
@@ -34,7 +36,9 @@
       <module name="base-api-rpc-api" target="1.8" />
       <module name="base-api-rpc-service" target="1.8" />
       <module name="base-api-server" target="1.5" />
+      <module name="base-common" target="1.8" />
       <module name="base-sys" target="1.8" />
+      <module name="base-sys-client" target="1.8" />
       <module name="base-sys-common" target="1.8" />
       <module name="base-sys-dao" target="1.8" />
       <module name="base-sys-rpc-api" target="1.8" />

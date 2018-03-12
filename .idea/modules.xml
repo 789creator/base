@@ -9,7 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/base-api/base-api-rpc-api/base-api-rpc-api.iml" filepath="$PROJECT_DIR$/base-api/base-api-rpc-api/base-api-rpc-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-api/base-api-rpc-service/base-api-rpc-service.iml" filepath="$PROJECT_DIR$/base-api/base-api-rpc-service/base-api-rpc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-api/base-api-server/base-api-server.iml" filepath="$PROJECT_DIR$/base-api/base-api-server/base-api-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-common/base-common.iml" filepath="$PROJECT_DIR$/base-common/base-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys.iml" filepath="$PROJECT_DIR$/base-sys/base-sys.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-client/base-sys-client.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-client/base-sys-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-common/base-sys-common.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-common/base-sys-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-dao/base-sys-dao.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-dao/base-sys-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-rpc-api/base-sys-rpc-api.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-rpc-api/base-sys-rpc-api.iml" />

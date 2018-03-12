@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/base-api/base-api-server" />
+    <file type="web" url="file://$PROJECT_DIR$/base-sys/base-sys-server" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
