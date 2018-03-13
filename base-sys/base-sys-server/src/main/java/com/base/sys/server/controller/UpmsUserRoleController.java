@@ -2,6 +2,7 @@ package com.base.sys.server.controller;
 
 
 import com.base.sys.rpc.api.service.IUpmsUserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.ui.Model;
@@ -27,6 +28,7 @@ public class UpmsUserRoleController {
     private IUpmsUserService upmsUserService;
 
     @RequestMapping("/test")
+    @RequiresPermissions("sys:test")
     public String test(Model model, HttpServletRequest request) {
         model.addAttribute("user",upmsUserService.selectById(1));
         return "test";

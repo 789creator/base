@@ -42,7 +42,7 @@ public class ShiroConfig {
 
     //    重写authc过滤器
     @Bean
-    public UpmsAuthenticationFilter upmsAuthenticationFilter() {
+    public UpmsAuthenticationFilter upmsAuthentication() {
         UpmsAuthenticationFilter upmsAuthenticationFilter = new UpmsAuthenticationFilter();
         return upmsAuthenticationFilter;
     }
@@ -56,23 +56,18 @@ public class ShiroConfig {
 
     //Shiro的Web过滤器
     @Bean
-    public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager, UpmsAuthenticationFilter upmsAuthenticationFilter) {
+    public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
         ShiroFilterFactoryBean factoryBean = new ShiroFilterFactoryBean();
         factoryBean.setSecurityManager(securityManager);
         factoryBean.setLoginUrl("login");
 //        factoryBean.setSuccessUrl();
 //        factoryBean.setUnauthorizedUrl();
         HashMap<String, Filter> map = new HashMap<>();
-        map.put("authc", upmsAuthenticationFilter);
-        factoryBean.setFilters(map);
-//        String filterChainDefinitions = " /sys/** = upmsSessionForceLogout,authc\n" +
-//                "                /sys/index = user\n" +
-//                "                /druid/** = user\n" +
-//                "                /swagger-ui.html = user\n" +
-//                "                /resources/** = anon\n" +
-//                "                /** = anon";
+        Map<String, Filter> filters = factoryBean.getFilters();
+//        filters.put("authc", upmsAuthenticationFilter);
+//        map.put("authc", upmsAuthenticationFilter);
         Map<String, String> filterChainDefinitionManager = new LinkedHashMap<>();
-        filterChainDefinitionManager.put("/sys/**", "upmsSessionForceLogout,authc");
+        filterChainDefinitionManager.put("/sys/**", "authc");
         filterChainDefinitionManager.put("/sys/index", "user");
         filterChainDefinitionManager.put("/druid/**", "user");
         filterChainDefinitionManager.put("/swagger-ui.html", "user");

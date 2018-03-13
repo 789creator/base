@@ -1,5 +1,6 @@
 package com.base.sys.client.shiro.realm;
 
+import com.base.common.util.EhCacheUtil;
 import com.base.common.util.MD5Util;
 import com.base.common.util.PropertiesFileUtil;
 import com.base.sys.dao.model.UpmsPermission;
@@ -28,37 +29,51 @@ public class UpmsRealm extends AuthorizingRealm {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UpmsRealm.class);
 
+    private static final String PERMISSIONS_CACHE_NAME = "base-upms-server-permissions-ehcache";
+    private static final String ROLES_CACHE_NAME = "base-upms-server-roles-ehcache";
     @Autowired
     private UpmsApiService upmsApiService;
 
     /**
      * 授权：验证权限时调用
+     *
      * @param principalCollection
      * @return
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         String username = (String) principalCollection.getPrimaryPrincipal();
-        UpmsUser upmsUser = upmsApiService.selectUpmsUserByUsername(username);
-
-        // 当前用户所有角色
-        List<UpmsRole> upmsRoles = upmsApiService.selectUpmsRoleByUpmsUserId(upmsUser.getUserId());
-        Set<String> roles = new HashSet<>();
-        for (UpmsRole upmsRole : upmsRoles) {
-            if (StringUtils.isNotBlank(upmsRole.getName())) {
-                roles.add(upmsRole.getName());
+        //todo loger
+        System.out.println("----------------------------------------------------------");
+        System.out.println("java.io.tmpdir:" + System.getProperty("java.io.tmpdir"));
+        System.out.println("----------------------------------------------------------");
+        Set<String> permissions = (Set<String>) EhCacheUtil.get(PERMISSIONS_CACHE_NAME, username);
+        Set<String> roles = (Set<String>) EhCacheUtil.get(ROLES_CACHE_NAME, username);
+        if (null == permissions || permissions.isEmpty() || null == roles || permissions.isEmpty()) {
+            UpmsUser upmsUser = upmsApiService.selectUpmsUserByUsername(username);
+            // 当前用户所有角色
+            List<UpmsRole> upmsRoles = upmsApiService.selectUpmsRoleByUpmsUserId(upmsUser.getUserId());
+            if (roles == null) {
+                roles = new HashSet<String>();
             }
-        }
-
-        // 当前用户所有权限
-        List<UpmsPermission> upmsPermissions = upmsApiService.selectUpmsPermissionByUpmsUserId(upmsUser.getUserId());
-        Set<String> permissions = new HashSet<>();
-        for (UpmsPermission upmsPermission : upmsPermissions) {
-            if (StringUtils.isNotBlank(upmsPermission.getPermissionValue())) {
-                permissions.add(upmsPermission.getPermissionValue());
+            for (UpmsRole upmsRole : upmsRoles) {
+                if (StringUtils.isNotBlank(upmsRole.getName())) {
+                    roles.add(upmsRole.getName());
+                }
             }
+            // 当前用户所有权限
+            List<UpmsPermission> upmsPermissions = upmsApiService.selectUpmsPermissionByUpmsUserId(upmsUser.getUserId());
+            if (permissions == null) {
+                permissions = new HashSet<String>();
+            }
+            for (UpmsPermission upmsPermission : upmsPermissions) {
+                if (StringUtils.isNotBlank(upmsPermission.getPermissionValue())) {
+                    permissions.add(upmsPermission.getPermissionValue());
+                }
+            }
+            EhCacheUtil.put(ROLES_CACHE_NAME, username, roles);
+            EhCacheUtil.put(PERMISSIONS_CACHE_NAME, username, permissions);
         }
-
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
         simpleAuthorizationInfo.setStringPermissions(permissions);
         simpleAuthorizationInfo.setRoles(roles);
@@ -67,6 +82,7 @@ public class UpmsRealm extends AuthorizingRealm {
 
     /**
      * 认证：登录时调用
+     *
      * @param authenticationToken
      * @return
      * @throws AuthenticationException
