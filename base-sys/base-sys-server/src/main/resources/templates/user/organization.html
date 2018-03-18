@@ -1,0 +1,114 @@
+﻿<div id="organizationDialog" class="crudDialog" xmlns:th="http://www.w3.org/1999/xhtml">
+    <form id="organizationForm" method="post">
+        <div class="form-group">
+            <!--<select id="organizationId" name="organizationId" multiple="multiple" style="width: 100%">-->
+            <!--<span th:each="upmsOrganization:${upmsOrganizations}">-->
+            <!--&lt;!&ndash;<option th:each="upmsUserOrganization:${upmsUserOrganizations}" th:selected="${upmsOrganization.organizationId==upmsUserOrganization.organizationId}" th:text="${upmsUserOrganization.name}"></option>&ndash;&gt;-->
+            <!--<option th:id="${upmsOrganization.organizationId}" th:text="${upmsOrganization.name}"></option>-->
+            <!--</span>-->
+            <!--</select>-->
+            <div id="organizationId"></div>
+        </div>
+        <div class="form-group text-right dialog-buttons">
+            <a class="waves-effect waves-button" href="javascript:;" onclick="organizationSubmit();">保存</a>
+            <a class="waves-effect waves-button" href="javascript:;" onclick="organizationDialog.close();">取消</a>
+        </div>
+    </form>
+</div>
+<script th:inline="javascript">
+    var upmsOrganizations = [[${upmsOrganizations}]];
+    var upmsUserOrganizations = [[${upmsUserOrganizations}]];
+    var data = []
+    $.each(upmsOrganizations, function (index, upmsOrganization) {
+        var id = upmsOrganization.organizationId;
+        if (isContain(id)) {
+            data.push({id: id, text: upmsOrganization.name, selected: true});
+        } else {
+            data.push({id: id, text: upmsOrganization.name});
+        }
+    });
+    function isContain(id) {
+        for (var i = 0; i < upmsUserOrganizations.length; i++) {
+            if (upmsUserOrganizations[i].organizationId == id) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    $("#organizationId").select2({
+        placeholder: '输入话题关键字',
+        tags: true,
+        multiple: true,
+        height: '40px',
+        maximumSelectionLength: 3,
+        allowClear: true,
+        language: "zh-CN",
+        data: data
+    });
+
+    function organizationSubmit() {
+        $.ajax({
+            type: 'post',
+            url: '${basePath}/manage/user/organization/' + organizationUserId,
+            data: $('#organizationForm').serialize(),
+            beforeSend: function () {
+
+            },
+            success: function (result) {
+                if (result.code != 1) {
+                    if (result.data instanceof Array) {
+                        $.each(result.data, function (index, value) {
+                            $.confirm({
+                                theme: 'dark',
+                                animation: 'rotateX',
+                                closeAnimation: 'rotateX',
+                                title: false,
+                                content: value.errorMsg,
+                                buttons: {
+                                    confirm: {
+                                        text: '确认',
+                                        btnClass: 'waves-effect waves-button waves-light'
+                                    }
+                                }
+                            });
+                        });
+                    } else {
+                        $.confirm({
+                            theme: 'dark',
+                            animation: 'rotateX',
+                            closeAnimation: 'rotateX',
+                            title: false,
+                            content: result.data.errorMsg,
+                            buttons: {
+                                confirm: {
+                                    text: '确认',
+                                    btnClass: 'waves-effect waves-button waves-light'
+                                }
+                            }
+                        });
+                    }
+                } else {
+                    organizationDialog.close();
+                    $table.bootstrapTable('refresh');
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                $.confirm({
+                    theme: 'dark',
+                    animation: 'rotateX',
+                    closeAnimation: 'rotateX',
+                    title: false,
+                    content: textStatus,
+                    buttons: {
+                        confirm: {
+                            text: '确认',
+                            btnClass: 'waves-effect waves-button waves-light'
+                        }
+                    }
+                });
+            }
+        });
+    }
+</script>

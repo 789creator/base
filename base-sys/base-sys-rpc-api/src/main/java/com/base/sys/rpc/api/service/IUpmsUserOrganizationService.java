@@ -13,4 +13,12 @@ import com.base.sys.dao.model.UpmsUserOrganization;
  */
 public interface IUpmsUserOrganizationService extends IService<UpmsUserOrganization> {
 
+    /**
+     * 用户组织
+     *
+     * @param organizationIds
+     * @param id
+     * @return
+     */
+    int organization(String[] organizationIds, int id);
 }

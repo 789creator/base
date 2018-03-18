@@ -13,4 +13,5 @@ import com.base.sys.dao.model.UpmsUser;
  */
 public interface IUpmsUserService extends IService<UpmsUser> {
 
+    UpmsUser createUser(UpmsUser upmsUser);
 }

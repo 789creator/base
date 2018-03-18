@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.boot:spring-boot-properties-migrator:unknown">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../repo/org/springframework/boot/spring-boot-properties-migrator/unknown/spring-boot-properties-migrator-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../repo/org/springframework/boot/spring-boot-properties-migrator/unknown/spring-boot-properties-migrator-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../repo/org/springframework/boot/spring-boot-properties-migrator/unknown/spring-boot-properties-migrator-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

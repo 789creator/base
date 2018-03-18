@@ -1,6 +1,8 @@
 package com.base.sys.server.controller;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.base.common.constant.JsonResult;
+import com.base.common.constant.JsonResultConstant;
 import com.base.common.util.PropertiesFileUtil;
 import com.base.common.util.RedisUtil;
 import com.base.sys.client.shiro.session.UpmsSession;
@@ -117,10 +119,10 @@ public class SSOController {
         String password = request.getParameter("password");
         String rememberMe = request.getParameter("rememberMe");
         if (StringUtils.isBlank(username)) {
-//            return new UpmsResult(UpmsResultConstant.EMPTY_USERNAME, "帐号不能为空！");
+            return new JsonResult(JsonResultConstant.FAILED,"帐号不能为空！");
         }
         if (StringUtils.isBlank(password)) {
-//            return new UpmsResult(UpmsResultConstant.EMPTY_PASSWORD, "密码不能为空！");
+            return new JsonResult(JsonResultConstant.FAILED,"密码不能为空！");
         }
         Subject subject = SecurityUtils.getSubject();
         Session session = subject.getSession();
@@ -139,11 +141,11 @@ public class SSOController {
                 }
                 subject.login(usernamePasswordToken);
             } catch (UnknownAccountException e) {
-//                return new UpmsResult(UpmsResultConstant.INVALID_USERNAME, "帐号不存在！");
+                return new JsonResult(JsonResultConstant.FAILED,"帐号不存在！");
             } catch (IncorrectCredentialsException e) {
-//                return new UpmsResult(UpmsResultConstant.INVALID_PASSWORD, "密码错误！");
+                return new JsonResult(JsonResultConstant.FAILED,"密码错误！");
             } catch (LockedAccountException e) {
-//                return new UpmsResult(UpmsResultConstant.INVALID_ACCOUNT, "帐号已锁定！");
+                return new JsonResult(JsonResultConstant.FAILED,"帐号已锁定！");
             }
             // 更新session状态
             upmsSessionDao.updateStatus(sessionId, UpmsSession.OnlineStatus.on_line);
@@ -161,11 +163,10 @@ public class SSOController {
         if (StringUtils.isBlank(backurl)) {
             UpmsSystem upmsSystem = upmsSystemService.selectUpmsSystemByName(PropertiesFileUtil.getInstance().get("app.name"));
             backurl = null == upmsSystem ? "/" : upmsSystem.getBasepath();
-//            return new UpmsResult(UpmsResultConstant.SUCCESS, backurl);
+            return new JsonResult(JsonResultConstant.SUCCESS,backurl);
         } else {
-//            return new UpmsResult(UpmsResultConstant.SUCCESS, backurl);
+            return new JsonResult(JsonResultConstant.SUCCESS,backurl);
         }
-        return "成功";
     }
 
     @ApiOperation(value = "校验code")

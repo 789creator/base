@@ -22,6 +22,7 @@
         <module name="base-sys-rpc-spi" />
         <module name="base-sys-server" />
         <module name="base-sys-server (1)" />
+        <module name="demo" />
         <module name="framework-api-common" />
         <module name="framework-api-dao" />
         <module name="framework-api-rpc-service" />
@@ -44,6 +45,7 @@
       <module name="base-sys-rpc-api" target="1.8" />
       <module name="base-sys-rpc-service" target="1.8" />
       <module name="base-sys-server" target="1.8" />
+      <module name="demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

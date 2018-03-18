@@ -6,10 +6,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.List;
@@ -38,5 +40,12 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         objectMapper.configure(MapperFeature.PROPAGATE_TRANSIENT_MARKER, true);// 忽略 transient 修饰的属性
         converters.add(new MappingJackson2HttpMessageConverter(objectMapper));
         super.configureMessageConverters(converters);
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("forward:sys/index");
+        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+        super.addViewControllers(registry);
     }
 }

@@ -1,7 +1,6 @@
 #app
 server:
     port: 8080
-
 #spring
 spring:
   devtools:
@@ -16,8 +15,11 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     cache: false
+    #模板编码，不用默认的HTML5，避免thymeleaf对.html的内容要求严格而报错
+    mode: LEGACYHTML5
   mvc:
     static-path-pattern: /static/**
+
   # H2 DATABASE CONFIG
 #  datasource:
 #    type: com.zaxxer.hikari.HikariDataSource

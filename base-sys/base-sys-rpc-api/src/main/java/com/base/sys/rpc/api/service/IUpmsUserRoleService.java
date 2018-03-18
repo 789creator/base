@@ -13,4 +13,11 @@ import com.base.sys.dao.model.UpmsUserRole;
  */
 public interface IUpmsUserRoleService extends IService<UpmsUserRole> {
 
+    /**
+     * 用户角色
+     * @param roleIds
+     * @param id
+     * @return
+     */
+    int role(String[] roleIds, int id);
 }

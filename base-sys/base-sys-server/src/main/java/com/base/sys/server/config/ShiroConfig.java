@@ -20,14 +20,16 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
-import org.springframework.beans.factory.config.MethodInvokingFactoryBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 import javax.servlet.Filter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @Configuration
 public class ShiroConfig {
@@ -59,7 +61,7 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilter(SecurityManager securityManager) {
         ShiroFilterFactoryBean factoryBean = new ShiroFilterFactoryBean();
         factoryBean.setSecurityManager(securityManager);
-        factoryBean.setLoginUrl("login");
+        factoryBean.setLoginUrl("/sso/login");
 //        factoryBean.setSuccessUrl();
 //        factoryBean.setUnauthorizedUrl();
         HashMap<String, Filter> map = new HashMap<>();
@@ -71,8 +73,8 @@ public class ShiroConfig {
         filterChainDefinitionManager.put("/sys/index", "user");
         filterChainDefinitionManager.put("/druid/**", "user");
         filterChainDefinitionManager.put("/swagger-ui.html", "user");
-        filterChainDefinitionManager.put("/resources/**", "anon");
-        filterChainDefinitionManager.put("/**", "anon");
+        filterChainDefinitionManager.put("/static/**", "anon");
+        filterChainDefinitionManager.put("/**", "user");
         factoryBean.setFilterChainDefinitionMap(filterChainDefinitionManager);
 //        factoryBean.setFilterChainDefinitions(filterChainDefinitions);
         return factoryBean;
@@ -179,4 +181,9 @@ public class ShiroConfig {
         //todo 动态获取Cookie名称
         return simpleCookie;
     }
+
+//    @Bean
+//    public ShiroDialect shiroDialect() {
+//        return new ShiroDialect();
+//    }
 }
