@@ -1,14 +1,13 @@
 ﻿<div id="organizationDialog" class="crudDialog" xmlns:th="http://www.w3.org/1999/xhtml">
     <form id="organizationForm" method="post">
-        <div class="form-group">
+        <!--<select class="form-group">-->
             <!--<select id="organizationId" name="organizationId" multiple="multiple" style="width: 100%">-->
             <!--<span th:each="upmsOrganization:${upmsOrganizations}">-->
             <!--&lt;!&ndash;<option th:each="upmsUserOrganization:${upmsUserOrganizations}" th:selected="${upmsOrganization.organizationId==upmsUserOrganization.organizationId}" th:text="${upmsUserOrganization.name}"></option>&ndash;&gt;-->
             <!--<option th:id="${upmsOrganization.organizationId}" th:text="${upmsOrganization.name}"></option>-->
             <!--</span>-->
             <!--</select>-->
-            <div id="organizationId"></div>
-        </div>
+            <select id="organizationId" name="organizationId" multiple="multiple" style="width: 100%"></select>
         <div class="form-group text-right dialog-buttons">
             <a class="waves-effect waves-button" href="javascript:;" onclick="organizationSubmit();">保存</a>
             <a class="waves-effect waves-button" href="javascript:;" onclick="organizationDialog.close();">取消</a>
@@ -27,14 +26,14 @@
             data.push({id: id, text: upmsOrganization.name});
         }
     });
+    console.log(data);
     function isContain(id) {
         for (var i = 0; i < upmsUserOrganizations.length; i++) {
             if (upmsUserOrganizations[i].organizationId == id) {
                 return true;
-            } else {
-                return false;
             }
         }
+        return false;
     }
 
     $("#organizationId").select2({
@@ -51,7 +50,7 @@
     function organizationSubmit() {
         $.ajax({
             type: 'post',
-            url: '${basePath}/manage/user/organization/' + organizationUserId,
+            url: '/sys/upmsUser/organization/' + organizationUserId,
             data: $('#organizationForm').serialize(),
             beforeSend: function () {
 

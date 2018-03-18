@@ -1,12 +1,4 @@
-﻿<%@ page contentType="text/html; charset=utf-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
-<c:set var="basePath" value="${pageContext.request.contextPath}"/>
-<div id="permissionDialog" class="crudDialog">
+﻿<div id="permissionDialog" class="crudDialog">
 	<form id="permissionForm" method="post">
 		<div class="row">
 			<div class="col-sm-6">
@@ -42,7 +34,7 @@
 		},
 		async: {
 			enable: true,
-			url: '${basePath}/manage/permission/user/' + permissionUserId + '?type=1'
+			url: '/sys/upmsPermission/user/' + permissionUserId + '?type=1'
 		},
 		data: {
 			simpleData: {
@@ -73,7 +65,7 @@
 		},
 		async: {
 			enable: true,
-			url: '${basePath}/manage/permission/user/' + permissionUserId + '?type=-1'
+			url: '/sys/upmsPermission/user/' + permissionUserId + '?type=-1'
 		},
 		data: {
 			simpleData: {
@@ -105,7 +97,7 @@
 		var changeDatas = changeDatas1.concat(changeDatas2);
 		$.ajax({
 			type: 'post',
-			url: '${basePath}/manage/user/permission/' + permissionUserId,
+			url: '/sys/upmsUser/permission/' + permissionUserId,
 			data: {datas: JSON.stringify(changeDatas), permissionUserId: permissionUserId},
 			success: function(result) {
 				if (result.code != 1) {

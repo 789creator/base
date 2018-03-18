@@ -1,5 +1,6 @@
 package com.base.sys.rpc.api.service;
 
+import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.service.IService;
 import com.base.sys.dao.model.UpmsPermission;
 
@@ -13,4 +14,5 @@ import com.base.sys.dao.model.UpmsPermission;
  */
 public interface IUpmsPermissionService extends IService<UpmsPermission> {
 
+    JSONArray getTreeByUserId(int usereId, int type);
 }

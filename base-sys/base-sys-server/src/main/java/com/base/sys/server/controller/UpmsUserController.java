@@ -155,7 +155,7 @@ public class UpmsUserController {
             wrapper.orderBy(sort + " " + order);
         }
         if (StringUtils.isNotBlank(search)) {
-            wrapper.or().like("title", search);
+            wrapper.or().like("realname", "%"+search+"%");
         }
         Page page = upmsUserService.selectPage(new Page(offset, limit), wrapper);
         Map<String, Object> result = new HashMap<>();
