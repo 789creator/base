@@ -15,4 +15,6 @@ import com.base.sys.dao.model.UpmsPermission;
 public interface IUpmsPermissionService extends IService<UpmsPermission> {
 
     JSONArray getTreeByUserId(int usereId, int type);
+
+    JSONArray getTreeByRoleId(int roleId);
 }

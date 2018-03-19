@@ -1,5 +1,6 @@
 package com.base.sys.rpc.api.service;
 
+import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.service.IService;
 import com.base.sys.dao.model.UpmsRolePermission;
 
@@ -13,4 +14,5 @@ import com.base.sys.dao.model.UpmsRolePermission;
  */
 public interface IUpmsRolePermissionService extends IService<UpmsRolePermission> {
 
+    int rolePermission(JSONArray datas, int id);
 }

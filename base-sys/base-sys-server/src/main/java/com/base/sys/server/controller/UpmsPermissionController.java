@@ -37,5 +37,13 @@ public class UpmsPermissionController {
     public Object user(@PathVariable("id") int id, HttpServletRequest request) {
         return upmsPermissionService.getTreeByUserId(id, NumberUtils.toInt(request.getParameter("type")));
     }
+
+    @ApiOperation(value = "角色权限列表")
+    @RequiresPermissions("upms:permission:read")
+    @RequestMapping(value = "/role/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public Object role(@PathVariable("id") int id) {
+        return upmsPermissionService.getTreeByRoleId(id);
+    }
 }
 
