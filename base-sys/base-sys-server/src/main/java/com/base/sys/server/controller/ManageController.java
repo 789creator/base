@@ -44,6 +44,7 @@ public class ManageController {
         UpmsSystem upmsSystem = new UpmsSystem();
         upmsSystem.setStatus(1);
         EntityWrapper<UpmsSystem> wrapper = new EntityWrapper<>(upmsSystem);
+        wrapper.setEntity(upmsSystem);
         List<UpmsSystem> upmsSystems = upmsSystemService.selectList(wrapper);
         modelMap.put("upmsSystems", upmsSystems);
         // 当前登录用户权限

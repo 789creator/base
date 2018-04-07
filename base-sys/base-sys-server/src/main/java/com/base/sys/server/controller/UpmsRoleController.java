@@ -122,6 +122,7 @@ public class UpmsRoleController {
         for (String id : split) {
             upmsRoleService.deleteById(Integer.valueOf(id));
         }
+        //todo 删除角色对应的权限
         return new JsonResult();
     }
 
