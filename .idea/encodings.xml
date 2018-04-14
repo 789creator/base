@@ -9,6 +9,12 @@
     <file url="file://$PROJECT_DIR$/base-api/base-api-rpc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-api/base-api-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-sso" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-sso/base-sso-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-sso/base-sso-samples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-sso/base-sso-samples/base-sso-sample-springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-sso/base-sso-samples/base-sso-token-sample-springboot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-sso/base-sso-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sys" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sys/base-sys-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sys/base-sys-common" charset="UTF-8" />

@@ -12,6 +12,9 @@
         <module name="base-api-rpc-service" />
         <module name="base-api-server" />
         <module name="base-common" />
+        <module name="base-sso-core" />
+        <module name="base-sso-sample-springboot" />
+        <module name="base-sso-server" />
         <module name="base-sys-client" />
         <module name="base-sys-common" />
         <module name="base-sys-common (1)" />
@@ -27,6 +30,7 @@
         <module name="framework-api-dao" />
         <module name="framework-api-rpc-service" />
         <module name="framework-api-rpc-spi" />
+        <module name="xxl-sso-token-sample-springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -38,6 +42,11 @@
       <module name="base-api-rpc-service" target="1.8" />
       <module name="base-api-server" target="1.8" />
       <module name="base-common" target="1.8" />
+      <module name="base-sso" target="1.7" />
+      <module name="base-sso-core" target="1.7" />
+      <module name="base-sso-sample-springboot" target="1.7" />
+      <module name="base-sso-samples" target="1.7" />
+      <module name="base-sso-server" target="1.7" />
       <module name="base-sys" target="1.8" />
       <module name="base-sys-client" target="1.8" />
       <module name="base-sys-common" target="1.8" />
@@ -46,6 +55,7 @@
       <module name="base-sys-rpc-service" target="1.8" />
       <module name="base-sys-server" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="xxl-sso-token-sample-springboot" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
