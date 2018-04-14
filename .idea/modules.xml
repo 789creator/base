@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/base-api/base-api-server/base-api-server.iml" filepath="$PROJECT_DIR$/base-api/base-api-server/base-api-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-common/base-common.iml" filepath="$PROJECT_DIR$/base-common/base-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sso/base-sso.iml" filepath="$PROJECT_DIR$/base-sso/base-sso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-sso/base-sso-common/base-sso-common.iml" filepath="$PROJECT_DIR$/base-sso/base-sso-common/base-sso-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sso/base-sso-core/base-sso-core.iml" filepath="$PROJECT_DIR$/base-sso/base-sso-core/base-sso-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sso/base-sso-samples/base-sso-sample-springboot/base-sso-sample-springboot.iml" filepath="$PROJECT_DIR$/base-sso/base-sso-samples/base-sso-sample-springboot/base-sso-sample-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sso/base-sso-samples/base-sso-samples.iml" filepath="$PROJECT_DIR$/base-sso/base-sso-samples/base-sso-samples.iml" />

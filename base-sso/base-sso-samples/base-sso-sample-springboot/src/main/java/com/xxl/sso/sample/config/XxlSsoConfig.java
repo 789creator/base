@@ -1,8 +1,8 @@
 package com.xxl.sso.sample.config;
 
-import com.xxl.sso.core.conf.Conf;
-import com.xxl.sso.core.filter.XxlSsoFilter;
-import com.xxl.sso.core.util.JedisUtil;
+import com.base.sso.core.conf.Conf;
+import com.base.sso.core.filter.XxlSsoFilter;
+import com.base.sso.core.util.JedisUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;

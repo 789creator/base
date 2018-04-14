@@ -1,8 +1,8 @@
 package com.xxl.sso.sample.controller;
 
-import com.xxl.sso.core.conf.Conf;
-import com.xxl.sso.core.entity.ReturnT;
-import com.xxl.sso.core.user.XxlUser;
+import com.base.sso.core.conf.Conf;
+import com.base.sso.core.entity.ReturnT;
+import com.base.sso.core.user.SsoUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,15 +19,15 @@ public class IndexController {
     @RequestMapping("/")
     public String index(Model model, HttpServletRequest request) {
 
-        XxlUser xxlUser = (XxlUser) request.getAttribute(Conf.SSO_USER);
+        SsoUser xxlUser = (SsoUser) request.getAttribute(Conf.SSO_USER);
         model.addAttribute("xxlUser", xxlUser);
         return "index";
     }
 
     @RequestMapping("/json")
     @ResponseBody
-    public ReturnT<XxlUser> json(Model model, HttpServletRequest request) {
-        XxlUser xxlUser = (XxlUser) request.getAttribute(Conf.SSO_USER);
+    public ReturnT<SsoUser> json(Model model, HttpServletRequest request) {
+        SsoUser xxlUser = (SsoUser) request.getAttribute(Conf.SSO_USER);
         return new ReturnT(xxlUser);
     }
 

@@ -12,9 +12,11 @@
         <module name="base-api-rpc-service" />
         <module name="base-api-server" />
         <module name="base-common" />
+        <module name="base-sso-common" />
         <module name="base-sso-core" />
         <module name="base-sso-sample-springboot" />
         <module name="base-sso-server" />
+        <module name="base-sso-token-sample-springboot" />
         <module name="base-sys-client" />
         <module name="base-sys-common" />
         <module name="base-sys-common (1)" />
@@ -42,11 +44,13 @@
       <module name="base-api-rpc-service" target="1.8" />
       <module name="base-api-server" target="1.8" />
       <module name="base-common" target="1.8" />
-      <module name="base-sso" target="1.7" />
-      <module name="base-sso-core" target="1.7" />
-      <module name="base-sso-sample-springboot" target="1.7" />
-      <module name="base-sso-samples" target="1.7" />
-      <module name="base-sso-server" target="1.7" />
+      <module name="base-sso" target="1.8" />
+      <module name="base-sso-common" target="1.8" />
+      <module name="base-sso-core" target="1.8" />
+      <module name="base-sso-sample-springboot" target="1.8" />
+      <module name="base-sso-samples" target="1.8" />
+      <module name="base-sso-server" target="1.8" />
+      <module name="base-sso-token-sample-springboot" target="1.8" />
       <module name="base-sys" target="1.8" />
       <module name="base-sys-client" target="1.8" />
       <module name="base-sys-common" target="1.8" />
