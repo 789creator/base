@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/shop/b2cshop/b2cshop.iml" filepath="$PROJECT_DIR$/shop/b2cshop/b2cshop.iml" />
       <module fileurl="file://$PROJECT_DIR$/base.iml" filepath="$PROJECT_DIR$/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-api/base-api.iml" filepath="$PROJECT_DIR$/base-api/base-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-api/base-api-common/base-api-common.iml" filepath="$PROJECT_DIR$/base-api/base-api-common/base-api-common.iml" />
@@ -25,6 +26,8 @@
       <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-rpc-service/base-sys-rpc-service.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-rpc-service/base-sys-rpc-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/base-sys/base-sys-server/base-sys-server.iml" filepath="$PROJECT_DIR$/base-sys/base-sys-server/base-sys-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop/shop.iml" filepath="$PROJECT_DIR$/shop/shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop/shop-generator/shop-generator.iml" filepath="$PROJECT_DIR$/shop/shop-generator/shop-generator.iml" />
     </modules>
   </component>
 </project>

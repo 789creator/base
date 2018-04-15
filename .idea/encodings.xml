@@ -24,6 +24,8 @@
     <file url="file://$PROJECT_DIR$/base-sys/base-sys-rpc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sys/base-sys-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop/b2cshop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop/shop-generator" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
