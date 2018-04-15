@@ -10,7 +10,6 @@ import com.baomidou.mybatisplus.plugins.PerformanceInterceptor;
 import com.baomidou.mybatisplus.plugins.parser.ISqlParser;
 import com.baomidou.mybatisplus.plugins.parser.tenant.TenantHandler;
 import com.baomidou.mybatisplus.plugins.parser.tenant.TenantSqlParser;
-import com.base.sso.server.MyMetaObjectHandler;
 import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.LongValue;
 import org.mybatis.spring.annotation.MapperScan;

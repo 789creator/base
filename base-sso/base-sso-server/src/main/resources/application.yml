@@ -1,7 +1,7 @@
 #app
 server:
     port: 8080
-    context-path: /base-sso-server
+    context-path: /
 #spring
 spring:
   devtools:
@@ -62,7 +62,7 @@ mybatis-plus:
     #自定义sql注入器,不在推荐使用此方式进行配置,请使用自定义bean注入
     sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
     #自定义填充策略接口实现,不在推荐使用此方式进行配置,请使用自定义bean注入
-    meta-object-handler: com.base.sso.server.MyMetaObjectHandler
+    meta-object-handler: com.base.sso.server.config.MyMetaObjectHandler
     #自定义SQL注入器
     #sql-injector: com.baomidou.springboot.xxx
     # SQL 解析缓存，开启后多租户 @SqlParser 注解生效

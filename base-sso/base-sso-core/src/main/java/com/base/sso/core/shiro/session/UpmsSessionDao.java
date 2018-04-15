@@ -16,22 +16,34 @@ import java.util.*;
 
 /**
  * 基于redis的sessionDao，缓存共享session
- * Created by shuzheng on 2017/2/23.
+ * @author z
  */
 public class UpmsSessionDao extends CachingSessionDAO {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UpmsSessionDao.class);
-    // 会话key
+    /**
+     * 会话key
+     */
     private final static String BASE_UPMS_SHIRO_SESSION_ID = "base-upms-shiro-session-id";
-    // 全局会话key
+    /**
+     * 全局会话key
+     */
     private final static String BASE_UPMS_SERVER_SESSION_ID = "base-upms-server-session-id";
-    // 全局会话列表key
+    /**
+     * 全局会话列表key
+     */
     private final static String BASE_UPMS_SERVER_SESSION_IDS = "base-upms-server-session-ids";
-    // code key
+    /**
+     * code key
+     */
     private final static String BASE_UPMS_SERVER_CODE = "base-upms-server-code";
-    // 局部会话key
+    /**
+     * 局部会话key
+     */
     private final static String BASE_UPMS_CLIENT_SESSION_ID = "base-upms-client-session-id";
-    // 单点同一个code所有局部会话key
+    /**
+     * 单点同一个code所有局部会话key
+     */
     private final static String BASE_UPMS_CLIENT_SESSION_IDS = "base-upms-client-session-ids";
 
     @Override
