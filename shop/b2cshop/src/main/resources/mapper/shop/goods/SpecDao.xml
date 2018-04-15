@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.b2cshop.modules.shop.goods.dao.SpecDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.b2cshop.modules.shop.goods.entity.SpecEntity" id="specMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="order" column="order"/>
+        <result property="searchIndex" column="search_index"/>
+        <result property="catId1" column="cat_id1"/>
+        <result property="catId2" column="cat_id2"/>
+        <result property="catId3" column="cat_id3"/>
+        <result property="specValType" column="spec_val_type"/>
+        <result property="specVal" column="spec_val"/>
+    </resultMap>
+
+
+</mapper>

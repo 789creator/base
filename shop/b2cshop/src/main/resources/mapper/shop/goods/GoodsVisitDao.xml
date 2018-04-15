@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.b2cshop.modules.shop.goods.dao.GoodsVisitDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.b2cshop.modules.shop.goods.entity.GoodsVisitEntity" id="goodsVisitMap">
+        <result property="goodsId" column="goods_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="visittime" column="visittime"/>
+        <result property="catId1" column="cat_id1"/>
+        <result property="catId2" column="cat_id2"/>
+        <result property="catId3" column="cat_id3"/>
+        <result property="visitId" column="visit_id"/>
+    </resultMap>
+
+
+</mapper>

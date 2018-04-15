@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.b2cshop.modules.shop.goods.dao.GoodsAttributeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.b2cshop.modules.shop.goods.entity.GoodsAttributeEntity" id="goodsAttributeMap">
+        <result property="attrId" column="attr_id"/>
+        <result property="attrName" column="attr_name"/>
+        <result property="typeId" column="type_id"/>
+        <result property="attrIndex" column="attr_index"/>
+        <result property="attrType" column="attr_type"/>
+        <result property="attrInputType" column="attr_input_type"/>
+        <result property="attrValues" column="attr_values"/>
+        <result property="order" column="order"/>
+    </resultMap>
+
+
+</mapper>

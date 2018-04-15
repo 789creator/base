@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.b2cshop.modules.shop.goods.dao.GoodsDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.b2cshop.modules.shop.goods.entity.GoodsEntity" id="goodsMap">
+        <result property="goodsId" column="goods_id"/>
+        <result property="catId1" column="cat_id1"/>
+        <result property="catId2" column="cat_id2"/>
+        <result property="catId3" column="cat_id3"/>
+        <result property="storeCatId1" column="store_cat_id1"/>
+        <result property="storeCatId2" column="store_cat_id2"/>
+        <result property="goodsSn" column="goods_sn"/>
+        <result property="goodsName" column="goods_name"/>
+        <result property="clickCount" column="click_count"/>
+        <result property="brandId" column="brand_id"/>
+        <result property="storeCount" column="store_count"/>
+        <result property="collectSum" column="collect_sum"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="weight" column="weight"/>
+        <result property="marketPrice" column="market_price"/>
+        <result property="shopPrice" column="shop_price"/>
+        <result property="costPrice" column="cost_price"/>
+        <result property="exchangeIntegral" column="exchange_integral"/>
+        <result property="keywords" column="keywords"/>
+        <result property="goodsRemark" column="goods_remark"/>
+        <result property="originalImg" column="original_img"/>
+        <result property="isVirtual" column="is_virtual"/>
+        <result property="virtualIndate" column="virtual_indate"/>
+        <result property="virtualLimit" column="virtual_limit"/>
+        <result property="virtualRefund" column="virtual_refund"/>
+        <result property="isOnSale" column="is_on_sale"/>
+        <result property="isFreeShipping" column="is_free_shipping"/>
+        <result property="onTime" column="on_time"/>
+        <result property="sort" column="sort"/>
+        <result property="isRecommend" column="is_recommend"/>
+        <result property="isNew" column="is_new"/>
+        <result property="isHot" column="is_hot"/>
+        <result property="lastUpdate" column="last_update"/>
+        <result property="goodsType" column="goods_type"/>
+        <result property="giveIntegral" column="give_integral"/>
+        <result property="salesSum" column="sales_sum"/>
+        <result property="promType" column="prom_type"/>
+        <result property="promId" column="prom_id"/>
+        <result property="distribut" column="distribut"/>
+        <result property="storeId" column="store_id"/>
+        <result property="spu" column="spu"/>
+        <result property="sku" column="sku"/>
+        <result property="goodsState" column="goods_state"/>
+        <result property="closeReason" column="close_reason"/>
+        <result property="suppliersId" column="suppliers_id"/>
+        <result property="shippingAreaIds" column="shipping_area_ids"/>
+        <result property="isOwnShop" column="is_own_shop"/>
+    </resultMap>
+
+
+</mapper>

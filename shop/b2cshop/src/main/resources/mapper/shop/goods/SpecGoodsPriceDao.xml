@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.b2cshop.modules.shop.goods.dao.SpecGoodsPriceDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.b2cshop.modules.shop.goods.entity.SpecGoodsPriceEntity" id="specGoodsPriceMap">
+        <result property="itemId" column="item_id"/>
+        <result property="goodsId" column="goods_id"/>
+        <result property="goodsMark" column="goods_mark"/>
+        <result property="key" column="key"/>
+        <result property="keyName" column="key_name"/>
+        <result property="price" column="price"/>
+        <result property="storeCount" column="store_count"/>
+        <result property="barCode" column="bar_code"/>
+        <result property="sku" column="sku"/>
+        <result property="storeId" column="store_id"/>
+        <result property="specImg" column="spec_img"/>
+        <result property="promId" column="prom_id"/>
+        <result property="promType" column="prom_type"/>
+    </resultMap>
+
+
+</mapper>
