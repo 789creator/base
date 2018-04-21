@@ -1,5 +1,6 @@
 package com.b2cshop.modules.im.handler;
 
+import com.b2cshop.modules.im.message.ChatMessage;
 import com.b2cshop.modules.im.message.ChatObject;
 import com.corundumstudio.socketio.AckRequest;
 import com.corundumstudio.socketio.SocketIOClient;
@@ -40,10 +41,10 @@ public class IMEventHandler {
 
     }
 
-    @OnEvent(value = "chat")
-    public void onEvent(SocketIOClient client, AckRequest request, ChatObject chatObject) {
-        logger.info("onEvent");
-    }
+    //    @OnEvent(value = "")
+//    public void onEvent(SocketIOClient client, AckRequest request, ChatObject chatObject) {
+//        logger.info("onEvent");
+//    }
     //消息接收入口，用于接受网站资源用户传入的 个人信息
 //    @OnEvent(value = "new")
 //    public void onEvent(SocketIOClient client, AckRequest request, Contacts contacts) {
@@ -57,9 +58,10 @@ public class IMEventHandler {
 //        System.out.println(data.getMessage());
 //    }
 //
-//    //消息接收入口，收发消息，用户向坐席发送消息和 坐席向用户发送消息
-//    @OnEvent(value = "message")
-//    public void onEvent(SocketIOClient client, AckRequest request, ChatMessage data) throws UnsupportedEncodingException {
-//
-//    }
+    //消息接收入口，收发消息，用户向坐席发送消息和 坐席向用户发送消息
+    @OnEvent(value = "message")
+    public void onEvent(SocketIOClient client, AckRequest request, ChatObject data) throws UnsupportedEncodingException {
+        logger.info(data.toString());
+        client.sendEvent("message",data);
+    }
 }  

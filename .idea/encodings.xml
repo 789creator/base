@@ -9,6 +9,11 @@
     <file url="file://$PROJECT_DIR$/base-api/base-api-rpc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-api/base-api-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-im" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-im" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-im/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-im/message-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base-im/talk-db-proxy" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sso" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sso/base-sso-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sso/base-sso-core" charset="UTF-8" />
@@ -24,6 +29,7 @@
     <file url="file://$PROJECT_DIR$/base-sys/base-sys-rpc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base-sys/base-sys-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/shop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop/b2cshop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shop/shop-generator" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

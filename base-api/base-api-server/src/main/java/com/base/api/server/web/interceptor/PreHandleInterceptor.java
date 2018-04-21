@@ -17,16 +17,15 @@ public class PreHandleInterceptor extends HandlerInterceptorAdapter {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-		//System.out.println(">>>PreHandleInterceptor>>>>>>>在请求处理之前进行调用（Controller方法调用之前）"+request.getRequestURI());
 
-		if(!"/api/reloadConfig".equals(request.getRequestURI()) && ConfigUtil.getInstance().getConfigBoolValue("site.pause")){
-			ResultBody body = new ResultBody();
-			body.setResMsg("系统例行维护中，请半小时再试，感谢您的耐心与支持");
-			response.setHeader("Content-type", "text/json;charset=UTF-8");
-			response.getOutputStream().write(JSON.toJSONString(body).getBytes("UTF-8"));
-			return false;
-		}
-        return true;// 只有返回true才会继续向下执行，返回false取消当前请求
+//		if(!"/api/reloadConfig".equals(request.getRequestURI()) && ConfigUtil.getInstance().getConfigBoolValue("site.pause")){
+//			ResultBody body = new ResultBody();
+//			body.setResMsg("系统例行维护中，请半小时再试，感谢您的耐心与支持");
+//			response.setHeader("Content-type", "text/json;charset=UTF-8");
+//			response.getOutputStream().write(JSON.toJSONString(body).getBytes("UTF-8"));
+//			return false;
+//		}
+        return true;
 	}
 	
 	@Override

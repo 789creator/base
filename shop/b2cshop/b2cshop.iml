@@ -176,5 +176,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-codec:4.0.25.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:4.0.25.Final" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.8.10" level="project" />
+    <orderEntry type="library" name="Maven: io.socket:socket.io-client:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: io.socket:engine.io-client:1.0.0" level="project" />
   </component>
 </module>

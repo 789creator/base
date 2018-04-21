@@ -17,16 +17,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @since 2018-03-11
  */
 @Controller
-@RequestMapping("/sys/upmsUser")
-public class UpmsUserController {
+@RequestMapping("/test")
+public class TestController {
 
     @Autowired
     private IUpmsUserService upmsUserService;
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     @ResponseBody
-    public String index() {
-        return "test";
+    public String test() {
+        return upmsUserService.test();
     }
 
 }

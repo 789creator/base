@@ -29,11 +29,17 @@
         <module name="base-sys-server" />
         <module name="base-sys-server (1)" />
         <module name="demo" />
+        <module name="eureka-server" />
         <module name="framework-api-common" />
         <module name="framework-api-dao" />
         <module name="framework-api-rpc-service" />
         <module name="framework-api-rpc-spi" />
+        <module name="message-common" />
+        <module name="message-server" />
         <module name="shop-generator" />
+        <module name="socketiodemo" />
+        <module name="talk-common" />
+        <module name="talk-db-proxy" />
         <module name="xxl-sso-token-sample-springboot" />
       </profile>
     </annotationProcessing>
@@ -47,6 +53,8 @@
       <module name="base-api-rpc-service" target="1.8" />
       <module name="base-api-server" target="1.8" />
       <module name="base-common" target="1.8" />
+      <module name="base-data" target="1.5" />
+      <module name="base-im" target="1.8" />
       <module name="base-sso" target="1.8" />
       <module name="base-sso-common" target="1.8" />
       <module name="base-sso-core" target="1.8" />
@@ -61,9 +69,17 @@
       <module name="base-sys-rpc-api" target="1.8" />
       <module name="base-sys-rpc-service" target="1.8" />
       <module name="base-sys-server" target="1.8" />
+      <module name="data-generator" target="1.8" />
+      <module name="data-server" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="message-common" target="1.8" />
+      <module name="message-server" target="1.8" />
       <module name="shop" target="1.5" />
       <module name="shop-generator" target="1.8" />
+      <module name="socketiodemo" target="1.8" />
+      <module name="talk-common" target="1.8" />
+      <module name="talk-db-proxy" target="1.8" />
       <module name="xxl-sso-token-sample-springboot" target="1.5" />
     </bytecodeTargetLevel>
   </component>

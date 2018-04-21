@@ -34,4 +34,9 @@ public class UpmsUserServiceImpl extends ServiceImpl<UpmsUserMapper, UpmsUser> i
         upmsUserMapper.insert(upmsUser);
         return upmsUser;
     }
+
+    @Override
+    public String test() {
+        return "test";
+    }
 }

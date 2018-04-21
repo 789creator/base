@@ -14,4 +14,6 @@ import com.base.api.dao.model.UpmsUser;
 public interface IUpmsUserService extends IService<UpmsUser> {
 
     UpmsUser createUser(UpmsUser upmsUser);
+
+    String test();
 }
